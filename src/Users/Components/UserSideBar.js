@@ -16,7 +16,7 @@ const bottomTabsData = [
 const UserSideBar = () => {
   return (
     <div style={styles.sidebar}>
-      <div style={styles.header}>DASHCART</div>
+      <div style={styles.header}>Cartizen</div>
       <div style={styles.tabs}>
         {tabsData.map((tab, index) => (
           <div
@@ -49,9 +49,9 @@ const UserSideBar = () => {
 
 const styles = {
   sidebar: {
-    width: '20vw',
+    width: '18vw',
     height: '100vh',
-    backgroundColor: 'darkblue',
+    backgroundColor: '#0f1315',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
@@ -90,7 +90,7 @@ const styles = {
 // Hover effect functions
 const handleMouseEnter = (e) => {
   e.currentTarget.style.backgroundColor = 'white';
-  e.currentTarget.style.color = 'darkblue';
+  e.currentTarget.style.color = '#0f1315';
 };
 
 const handleMouseLeave = (e) => {
