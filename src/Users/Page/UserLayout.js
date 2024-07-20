@@ -1,5 +1,6 @@
 import React from "react"
 import UserSideBar from "../Components/UserSideBar";
+import Upper from "../Components/Upper";
 
 const UserLayout = () => {
   return (
@@ -8,7 +9,7 @@ const UserLayout = () => {
 <UserSideBar/>
       </div>
       <div style={{backgroundColor:'yellow',height:'100vh',width:'80vw'}}>
-
+        <Upper/>
       </div>
     </div>
   )
