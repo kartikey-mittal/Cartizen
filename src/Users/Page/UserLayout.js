@@ -1,6 +1,8 @@
 import React from "react"
 import UserSideBar from "../Components/UserSideBar";
 import UserHome from "./UserHome";
+import Upper from "../Components/Upper";
+import UserMain from "./UserMain";
 
 const UserLayout = () => {
   return (
@@ -8,8 +10,10 @@ const UserLayout = () => {
       <div style={{backgroundColor:'green',height:"100vh",width:"18vw"}}>
 <UserSideBar/>
       </div>
-      <div style={{backgroundColor:'#ffffff',height:'100vh',width:'82vw'}}>
-<UserHome/>
+    
+      <div style={{backgroundColor:'yellow',height:'100vh',width:'82vw'}}>
+       <Upper/>
+        <UserMain/>
       </div>
     </div>
   )
