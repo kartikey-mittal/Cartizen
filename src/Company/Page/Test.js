@@ -11,7 +11,7 @@ const Test = () => {
       map.addListener('load', function () {
         const direction_option = {
           map: map,
-          divWidth: '350px',
+          divWidth: '0px',
           start: {
             label: 'start',
             geoposition: '28.63124010064198,77.46734619140625',
@@ -41,8 +41,8 @@ const Test = () => {
       document.head.appendChild(script);
     };
 
-    loadScript('https://apis.mappls.com/advancedmaps/api/109a9c21-4af0-495d-b653-32de73b1b673/map_sdk?layer=vector&v=3.0&callback=initMap1', () => {
-      loadScript('https://apis.mappls.com/advancedmaps/api/109a9c21-4af0-495d-b653-32de73b1b673/map_sdk_plugins?v=3.0', initMap);
+    loadScript('https://apis.mappls.com/advancedmaps/api/2c2bfb92-ccda-44ab-949a-7f22280edd66/map_sdk?layer=vector&v=3.0&callback=initMap1', () => {
+      loadScript('https://apis.mappls.com/advancedmaps/api/2c2bfb92-ccda-44ab-949a-7f22280edd66/map_sdk_plugins?v=3.0', initMap);
     });
   }, []);
 

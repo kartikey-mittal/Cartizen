@@ -59,11 +59,11 @@ const CompanyMain = () => {
 
   return (
     <div style={{ height: '85.5vh', width: "82vw", backgroundColor: 'pink', display: 'flex', flexDirection: 'row' }}>
-      <div style={{ width: '50%', height: '100%', backgroundColor: 'red' }}>
+      <div style={{ width: '50%', height: '100%', backgroundColor: 'black' }}>
         <CompanyLeft />
       </div>
-      <div style={{ width: '50%', height: '100%', backgroundColor: 'yellow' }}>
-        <CompanyMainR />
+      <div style={{ width: '50%', height: '100%', backgroundColor: 'black' }}>
+        {/* <CompanyMainR /> */}
       </div>
     </div>
   );

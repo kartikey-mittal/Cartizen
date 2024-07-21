@@ -26,7 +26,7 @@ const CompanyRight = () => {
         <h1 style={{ fontSize: "2rem", width: "80%" }}>Batch Found!</h1>
         <div
           style={{
-            backgroundColor: "green",
+            backgroundColor: "#58b34e",
             borderRadius: "100%",
             height: "30px",
             width: "30px",

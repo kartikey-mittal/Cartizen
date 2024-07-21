@@ -1,5 +1,4 @@
-import React, { useEffect, useRef } from "react";
-
+import React, { useEffect, useState } from "react";
 import Upper from "../Components/Upper";
 import Inventory from "./Inventory";
 import CompanyMain from "./CompanyMain";
@@ -11,68 +10,62 @@ client
   .setEndpoint('https://cloud.appwrite.io/v1') // Your API Endpoint
   .setProject('65773c8581b895f83d40'); // Your project ID
 
-
 const CompanyLayout = () => {
   const databases = new Databases(client);
+  const [itemKey, setItemKey] = useState(null); // State to store the Product-Key
 
   const documentId = '65a1115598845be4f92a'; // Replace with your actual document ID
-  const subscriptionsRef = useRef([]);
 
   useEffect(() => {
-    const subscribeToRealtimeUpdates = (documentId) => {
-      console.log("Subscribing to document ID", documentId);
+    const fetchDocumentData = async () => {
+      try {
+        const response = await databases.getDocument(
+          'data-level-1', // Replace with your database ID
+          'AdminDB', // Replace with your collection ID
+          documentId
+        );
 
-      const subscription = client.subscribe(
-        `databases.data-level-1.collections.AdminDB.documents.${documentId}`,
-        (response) => {
-          console.log("Full Realtime Response:", response);
-          console.log(
-            `Received Appwrite event for document ${documentId}:`,
-            response.events
-          );
+        console.log('Document Data:', response);
 
-          // Your custom logic here
-          // Example: Log the payload
-          const payload = response.payload;
-          console.log('Payload:', payload);
-
-          // Example: Check the Product-Key attribute and print messages
-          if (payload['Product-Key'] === 10) {
-            console.log('Avoiral');
-          } else if (payload['Product-Key'] === 11) {
-            console.log('Kartikey');
-          }
-
-          // Example: Check if the status attribute changed
-          if (payload.status) {
-            alert('Hello');
-          }
+        // Check the Product-Key attribute and update the state
+        if (response['Product-Key'] === 10) {
+          localStorage.setItem('itemKey',10)
+          setItemKey(10);
+          console.log('Avoiral');
+        } else if (response['Product-Key'] === 11) {
+          setItemKey(11);
+          localStorage.setItem('itemKey',11)
+          console.log('Kartikey');
+        } else if (response['Product-Key'] === 12) {
+          setItemKey(12);
+          localStorage.setItem('itemKey',12)
+          console.log('Other Key 12');
         }
-      );
 
-      subscriptionsRef.current = [subscription];
+        // Example: Check the statuskey attribute
+        if (response.statuskey) {
+          alert('Hello');
+        }
+      } catch (error) {
+        console.error('Error fetching document:', error);
+      }
     };
 
-    subscribeToRealtimeUpdates(documentId);
+    fetchDocumentData();
+  }, [databases, documentId]);
 
-    // Cleanup subscription on component unmount
-    return () => {
-      subscriptionsRef.current.forEach((subscription) => subscription());
-    };
-  }, [client, documentId]);
   return (
-    <div style={{display:'flex',flexDirection:'row',height:'100vh',width:'100vw',backgroundColor:'red'}}>
-      <div style={{backgroundColor:'green',height:"100vh",width:"18vw"}}>
-<CompanySideBar/>
+    <div style={{ display: 'flex', flexDirection: 'row', height: '100vh', width: '100vw', backgroundColor: 'red' }}>
+      <div style={{ backgroundColor: '#58b34e', height: "100vh", width: "18vw" }}>
+        <CompanySideBar />
       </div>
-    
-      <div style={{backgroundColor:'yellow',height:'100vh',width:'82vw'}}>
-       <Upper/>
-     {/* <CompanyMain/> */}
-     <Inventory/>
+      <div style={{ backgroundColor: 'black', height: '100vh', width: '82vw' }}>
+        <Upper />
+        {/* <Inventory itemKey={itemKey} /> Pass the itemKey state to the Inventory component */}
+        <CompanyMain/>
       </div>
     </div>
   )
 };
 
-export default CompanyLayout
+export default CompanyLayout;

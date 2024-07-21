@@ -4,22 +4,25 @@ import { FaUserCircle, FaPhone, FaCheckCircle } from "react-icons/fa";
 const RideLeft = () => {
   // Example rider data
   const riders = [
-    { name: "John Doe", number: "+1234567890" },
-    { name: "Jane Smith", number: "+0987654321" },
-    { name: "Mike Johnson", number: "+1122334455" },
+    { name: "Amit", number: "UP16AB2003" },
+    { name: "Pankaj", number: "UP16AB2004" },
+    { name: "Rahul", number: "UP16AB2005" },
+    { name: "Mohan", number: "UP16AB2006" },
+    { name: "Akash", number: "UP16AB2007" },
   ];
 
   return (
     <div
       style={{
         borderRadius: "2rem",
-        backgroundColor: "white",
+        backgroundColor: "#f1f1f1",
         padding: "2rem",
         margin: "2rem",
         height: "90%",
         display: "flex",
         flexDirection: "column",
         gap: "1rem",
+        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
       }}
     >
       <div style={{ display: "flex", flexDirection: "row", alignItems: "center" }}>
@@ -42,7 +45,7 @@ const RideLeft = () => {
               flexDirection: "row",
               alignItems: "center",
               borderRadius: "0.7rem",
-              backgroundColor: "#f4f4f4",
+              backgroundColor: "#f8f8f8",
               padding: '0.8rem',
               marginBottom: '0.5rem',
               gap: '1rem',
@@ -50,20 +53,24 @@ const RideLeft = () => {
           >
             {/* First Column: Circle */}
             <div
-              style={{
-                height: "50px",
-                width: "50px",
-                borderRadius: "50%",
-                backgroundColor: "red",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                color: "white",
-                fontSize: "2rem",
-              }}
-            >
-              {/* <FaUserCircle /> Uncomment and add image later */}
-            </div>
+  style={{
+    height: "50px",
+    width: "50px",
+    borderRadius: "50%",
+    backgroundColor: "white",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    color: "white",
+    fontSize: "2rem",
+    backgroundImage: "url('https://img.freepik.com/premium-vector/delivery-man-riding-red-scooter-illustration_9845-14.jpg')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}
+>
+  {/* <FaUserCircle /> Uncomment and add image later */}
+</div>
+
 
             {/* Second Column: Name and Number */}
             <div style={{ flex: 1 }}>
@@ -75,13 +82,13 @@ const RideLeft = () => {
               </div>
             </div>
 
-            {/* Third Column: Green Circle */}
+            {/* Third Column: #58b34e Circle */}
             <div
               style={{
                 height: "20px",
                 width: "20px",
                 borderRadius: "50%",
-                backgroundColor: "green",
+                backgroundColor: "#58b34e",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -96,21 +103,7 @@ const RideLeft = () => {
       </div>
 
       {/* Full-Width Button */}
-      <button
-        style={{
-          width: "100%",
-          padding: "1rem",
-          borderRadius: "1rem",
-          backgroundColor: "blue",
-          color: "white",
-          border: "none",
-          fontSize: "1rem",
-          cursor: "pointer",
-          marginTop: "auto",
-        }}
-      >
-        VIEW
-      </button>
+     
     </div>
   );
 };

@@ -5,7 +5,7 @@ const data = [
   { count: 12, title: 'COMPLETED', color: ['#4caf50', '#8bc34a'] },
   { count: 18, title: 'PENDING', color: ['#ff9800', '#ffc107'] },
   { count: 15, title: 'FAILED', color: ['#f44336', '#e91e63'] },
-  { count: 15, title: 'FAILED', color: ['#f44336', '#e91e63'] },
+  { count: 'Rs 240', title: 'SALE', color: ['#f44336', '#e91e63'] },
 ];
 
 function Upper() {
@@ -14,7 +14,7 @@ function Upper() {
       style={{
         display: 'flex',
         flexDirection: 'row',
-        background: 'linear-gradient(to right, #f44336, #e91e63)',
+        background: '#0f1315',
         padding: '0 2rem',
         justifyContent: 'space-between',
         alignItems: 'center',

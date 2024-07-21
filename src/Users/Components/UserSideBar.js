@@ -4,8 +4,8 @@ import { FaHome, FaUser, FaCog, FaSignOutAlt, FaQuestionCircle } from 'react-ico
 // Define tab data
 const tabsData = [
   { icon: FaHome, text: 'Home' },
-  { icon: FaUser, text: 'Profile' },
-  { icon: FaCog, text: 'Settings' },
+  { icon: FaUser, text: 'Orders' },
+  { icon: FaCog, text: 'Riders' },
 ];
 
 const bottomTabsData = [

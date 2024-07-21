@@ -1,17 +1,57 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Modal from "react-modal";
 import OrdersMap from "./OrdersMap";
 import CompanyMainR from "./CompanyMainR";
 
+const initialRiders = [
+  { name: "ORDERID 102", number: "KARTIKEY", price: "Rs 2100" },
+  { name: "ORDERID 103", number: "AVIRAL", price: "Rs 1800" },
+  { name: "ORDERID 104", number: "LASKHAY", price: "Rs 2500" },
+];
+
+const newOrders = {
+  11: [{ name: "ORDERID 105", number: "NEW RIDER", price: "Rs 1500" }],
+  12: [{ name: "ORDERID 106", number: "ANOTHER RIDER", price: "Rs 1600" }],
+  13: [{ name: "ORDERID 107", number: "YET ANOTHER RIDER", price: "Rs 1700" }],
+};
+
 const CompanyLeft = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedRider, setSelectedRider] = useState(null);
+  const [riders, setRiders] = useState([]);
+  const [itemKey, setItemKey] = useState(null);
 
-  const riders = [
-    { name: "ID 702", number: "+1234567890", price: "Rs 2100" },
-    { name: "Jane Smith", number: "+0987654321", price: "Rs 1800" },
-    { name: "Mike Johnson", number: "+1122334455", price: "Rs 2500" },
-  ];
+  useEffect(() => {
+    const itemKey = localStorage.getItem('itemKey');
+    setItemKey(itemKey);
+  }, []);
+
+  useEffect(() => {
+    // Load existing orders from local storage
+    const storedRiders = localStorage.getItem('companyOrders');
+    if (storedRiders) {
+      setRiders(JSON.parse(storedRiders));
+    } else {
+      setRiders(initialRiders);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (itemKey && newOrders[itemKey]) {
+      setRiders(prevRiders => {
+        const newOrdersToAdd = newOrders[itemKey].filter(
+          newOrder => !prevRiders.some(rider => rider.name === newOrder.name)
+        );
+        if (newOrdersToAdd.length > 0) {
+          // Add new orders to the top
+          const updatedRiders = [...newOrdersToAdd, ...prevRiders];
+          localStorage.setItem('companyOrders', JSON.stringify(updatedRiders));
+          return updatedRiders;
+        }
+        return prevRiders;
+      });
+    }
+  }, [itemKey]);
 
   const openModal = (rider) => {
     setSelectedRider(rider);
@@ -38,7 +78,7 @@ const CompanyLeft = () => {
       }}
     >
       <div style={{ display: "flex", flexDirection: "row", alignItems: "center" }}>
-        <h1 style={{ fontSize: "2rem", width: "80%" }}>2 ongoing orders</h1>
+        <h1 style={{ fontSize: "2rem", width: "80%" ,fontWeight:'800'}}>Ongoing Orders</h1>
       </div>
 
       <div
@@ -70,12 +110,14 @@ const CompanyLeft = () => {
                 height: "50px",
                 width: "50px",
                 borderRadius: "50%",
-                backgroundColor: "red",
+                backgroundColor: "black",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 color: "white",
-                fontSize: "2rem",
+                fontSize: "2rem",backgroundImage: "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkdAhF4g8noUwT14Mi8dI8lwyJgrj54JLKh0pFTSRO0huGL3oPwX4F9mUV-0Kathl3SoQ&usqp=CAU')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
               }}
             >
               {/* <FaUserCircle /> Uncomment and add image later */}
@@ -89,7 +131,7 @@ const CompanyLeft = () => {
                     height: "20px",
                     width: "20px",
                     borderRadius: "50%",
-                    backgroundColor: "green",
+                    backgroundColor: "#58b34e",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -150,11 +192,11 @@ const CompanyLeft = () => {
             <button onClick={closeModal} style={{ fontSize: "1.5rem", cursor: "pointer" }}>X</button>
           </div>
           <div style={{ display: "flex", height: "95%" }}>
-            <div style={{ width: "50%", backgroundColor: "red", padding: "0rem", marginRight: "0.5rem" }}>
+            <div style={{ width: "50%", backgroundColor: "white", padding: "0rem", marginRight: "0.5rem",borderRadius:"21rem" }}>
               <OrdersMap />
             </div>
-            <div style={{ width: "50%", backgroundColor: "yellow", padding: "0rem", marginLeft: "0.5rem" }}>
-      <CompanyMainR/>
+            <div style={{ width: "50%", backgroundColor: "white", padding: "0rem", marginLeft: "0.5rem" }}>
+              <CompanyMainR />
             </div>
           </div>
         </Modal>

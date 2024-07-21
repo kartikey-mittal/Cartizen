@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-const OrdersMap = () => {
+const MapHome = () => {
   useEffect(() => {
     const initMap = () => {
       const map = new window.mappls.Map('map', {
@@ -14,15 +14,15 @@ const OrdersMap = () => {
           divWidth: '0px',
           start: {
             label: 'start',
-            geoposition: '28.61063800000000,77.44149800000000',
+            geoposition: '28.612964,77.229463',
           },
           isDraggable: false,
           end: { label: 'India Gate', geoposition: '28.612964,77.229463' },
           Profile: ['driving', 'biking', 'trucking', 'walking'],
           via: [
-            // { label: 'mathura', geoposition: '28.544,77.4541' },
-            // { label: 'Koshi', geoposition: '28.144,77.4541' },
-            // { label: 'CITY', geoposition: '28.148,77.4541' },
+            { label: 'Rider1 ', geoposition: '28.5610,77.3450' },
+            { label: 'Rider 2', geoposition: '28.5700,77.3200' },
+            // { label: 'CITY', geoposition: '28.5700,77.3200' },
           ],
         };
         window.mappls.direction(direction_option, function (data) {
@@ -49,4 +49,4 @@ const OrdersMap = () => {
   return <div id="map" style={{ height: '100vh' }}></div>;
 };
 
-export default OrdersMap;
+export default MapHome;

@@ -14,7 +14,7 @@ function Upper() {
       style={{
         display: 'flex',
         flexDirection: 'row',
-        background: 'linear-gradient(to right, #f44336, #e91e63)',
+        background: '#000',
         padding: '0 2rem',
         justifyContent: 'space-between',
         alignItems: 'center',
@@ -52,7 +52,7 @@ function Upper() {
               color: 'white',
               fontWeight: 'bold',
               boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-              border:".1px solid white"
+             
             }}
           >
             {item.title}

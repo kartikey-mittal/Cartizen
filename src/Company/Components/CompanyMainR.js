@@ -4,9 +4,7 @@ const CompanyMainR = () => {
   // Array of items
   const items = [
     { name: "MAGGI 20 GM", quantity: 2, price: 10 },
-    { name: "BISCUITS 10 PKT", quantity: 3, price: 15 },
-    { name: "CHIPS 5 PKT", quantity: 4, price: 20 },
-    { name: "SOFT DRINK 2 L", quantity: 1, price: 25 }
+ 
   ];
 
   // Calculate total price
@@ -26,10 +24,10 @@ const CompanyMainR = () => {
       }}
     >
       <div style={{ display: "flex", flexDirection: "row", alignItems: "center" }}>
-        <h1 style={{ fontSize: "2rem", width: "80%" }}>ID 807678</h1>
+        <h1 style={{ fontSize: "2rem", width: "80%",fontWeight:'500' }}>ID 807678</h1>
         <div
           style={{
-            backgroundColor: "green",
+            backgroundColor: "#58b34e",
             borderRadius: "10rem",padding:"0.5rem 2rem"
            ,fontSize:"0.8REM",color:"white"
           }}
@@ -39,8 +37,8 @@ const CompanyMainR = () => {
       {/* Adjusted ZEPTO styling */}
       <span
         style={{
-          backgroundColor: "red",
-          color: "wheat",
+          backgroundColor: "white",
+          color: "black",
           borderRadius: "1rem",
           padding: "0.4rem 1rem",  // Horizontal padding only
           border: "1px solid black",
@@ -59,11 +57,11 @@ const CompanyMainR = () => {
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <span>Phone</span>
-          <span style={{ fontSize: "1.2rem" }}>+1234567890</span>
+          <span style={{ fontSize: "1.2rem" }}>+917678416005</span>
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <span>Address</span>
-          <span style={{ fontSize: "1.2rem" }}>123 Main St, City, Country</span>
+          <span style={{ fontSize: "1.2rem" }}>SUPERTECH ECO VILLAGE 1,NOIDA,UTTAR PRADESH</span>
         </div>
       </div>
 
@@ -117,14 +115,14 @@ const CompanyMainR = () => {
           width: "100%",
           padding: "1rem",
           borderRadius: "1rem",
-          backgroundColor: "red",
+          backgroundColor: "black",
           color: "white",
           border: "none",
           fontSize: "1rem",
-          cursor: "pointer",
+          cursor: "pointer",fontWeight:"500"
         }}
       >
-        Checkout
+        DONE
       </button>
     </div>
   );
