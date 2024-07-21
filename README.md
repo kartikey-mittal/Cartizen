@@ -1,8 +1,58 @@
-# Getting Started with Create React App
+# CARTIZEN
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Cartizen is a unified logistics platform designed to streamline the supply chain for quick commerce websites. By aggregating orders from multiple companies and combining deliveries to nearby locations, we eliminate redundant trips, reduce delivery costs, and minimize carbon emissions
 
-## Available Scripts
+![Logo](https://i.postimg.cc/RVs8Vt36/Screenshot-2024-07-21-081345.png)
+
+## [Deploy Link🚀](https://cartizen.vercel.app/home)
+## [Youtube Link📽️](https://www.youtube.com/watch?v=agGBjbsjKS4)
+# Features
+
+## **Order Aggregation**
+We collect orders from various quick commerce websites and identify those that are geographically close to each other.
+## **Route Optimization**
+Using advanced algorithms, we optimize delivery routes to ensure that orders destined for the same or nearby locations are delivered together.
+
+## **Cost Reduction**
+By consolidating deliveries, we cut down on the number of trips required, thereby significantly reducing fuel and labor costs.
+
+## **Environmental Impact**
+Fewer delivery trips mean lower carbon emissions, contributing to a greener and more sustainable environment.
+
+## **Scalability**
+The solution is scalable, allowing for seamless integration with various quick commerce websites and accommodating fluctuating order volumes.
+
+# Screenshots
+
+### Cartizen
+![User Location](https://i.postimg.cc/MTpVTnfH/Screenshot-2024-07-21-075820.png)
+
+![User DashBoard](https://i.postimg.cc/ydp9S70P/Screenshot-2024-07-21-081230.png)
+
+
+![User-Choosing Weight](https://i.postimg.cc/jq9Pxdxq/Screenshot-2024-07-21-081438.png)
+### Clients
+![Real-Time Updates Screenshot 2](https://i.postimg.cc/52J3JNgY/Screenshot-2024-07-21-080253.png)
+
+
+![User-Friendly Navigation Screenshot](https://i.postimg.cc/rpnC5Gkx/Screenshot-2024-07-21-083139.png)
+
+![User-Friendly Navigation Screenshot](https://i.postimg.cc/1tbGj94z/Screenshot-2024-07-21-090833.png)
+
+# 🔗 Stacks
+
+[![Firebase](https://img.shields.io/badge/firebase-000?style=for-the-badge&logo=firebase&logoColor=orange)](https://firebase.google.com/)  
+[![Node.js](https://img.shields.io/badge/nodejs-000?style=for-the-badge&logo=node.js&logoColor=339933)](https://nodejs.org/)  
+[![Axios](https://img.shields.io/badge/axios-black?style=for-the-badge&logo=axios&logoColor=white)](https://github.com/axios/axios)  
+[![React](https://img.shields.io/badge/react-000?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)  
+[![Google Maps API](https://img.shields.io/badge/google_maps_API-000?style=for-the-badge&logo=google-maps&logoColor=white)](https://developers.google.com/maps)  
+[![Cloudinary](https://img.shields.io/badge/cloudinary-000?style=for-the-badge&logo=cloudinary&logoColor=blue)](https://cloudinary.com/)
+
+
+
+# Installation
+
+Install my-project with npm
 
 In the project directory, you can run:
 
@@ -11,60 +61,6 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Feedback
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Share your feedback to help us continuously improve!Thank you UpSkill Mafia Team 🙏 
