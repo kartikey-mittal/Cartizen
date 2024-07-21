@@ -41,8 +41,8 @@ const OrdersMap = () => {
       document.head.appendChild(script);
     };
 
-    loadScript('https://apis.mappls.com/advancedmaps/api/2c2bfb92-ccda-44ab-949a-7f22280edd66/map_sdk?layer=vector&v=3.0&callback=initMap1', () => {
-      loadScript('https://apis.mappls.com/advancedmaps/api/2c2bfb92-ccda-44ab-949a-7f22280edd66/map_sdk_plugins?v=3.0', initMap);
+    loadScript('https://apis.mappls.com/advancedmaps/api/101591ad-cf84-415b-92aa-bfb871fd68c2/map_sdk?layer=vector&v=3.0&callback=initMap1', () => {
+      loadScript('https://apis.mappls.com/advancedmaps/api/101591ad-cf84-415b-92aa-bfb871fd68c2/map_sdk_plugins?v=3.0', initMap);
     });
   }, []);
 

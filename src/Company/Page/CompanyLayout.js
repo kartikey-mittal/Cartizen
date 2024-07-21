@@ -61,8 +61,8 @@ const CompanyLayout = () => {
       </div>
       <div style={{ backgroundColor: 'black', height: '100vh', width: '82vw' }}>
         <Upper />
-        {/* <Inventory itemKey={itemKey} /> Pass the itemKey state to the Inventory component */}
-        <CompanyMain/>
+        <Inventory itemKey={itemKey} /> Pass the itemKey state to the Inventory component
+        {/* <CompanyMain/> */}
       </div>
     </div>
   )

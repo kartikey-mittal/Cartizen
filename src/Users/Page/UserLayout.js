@@ -13,8 +13,8 @@ const UserLayout = () => {
     
       <div style={{backgroundColor:'#000',height:'100vh',width:'82vw'}}>
        <Upper/>
-        <UserMain/>
-        {/* <UserHome/> */}
+        {/* <UserMain/> */}
+        <UserHome/>
       </div>
     </div>
   )

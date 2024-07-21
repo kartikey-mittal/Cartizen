@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from 'react';
 
 const initialCardData = [
-  { id: 1, title: 'Card 1', stock: '1', price: "20", imgsrc: "https://via.placeholder.com/150" },
-  { id: 2, title: 'Card 2', stock: '2', price: "20", imgsrc: "https://via.placeholder.com/150" },
-  { id: 3, title: 'Card 3', stock: '3', price: "20", imgsrc: "https://via.placeholder.com/150" },
-  { id: 4, title: 'Card 4', stock: '6', price: "20", imgsrc: "https://via.placeholder.com/150" },
+  { id: 1, title: 'Maggi', stock: '1', price: "20", imgsrc: "https://5.imimg.com/data5/SELLER/Default/2022/7/MU/PJ/SD/5742893/maggi-noodles.jpg" },
+  { id: 2, title: 'Ashrivad Atta', stock: '2', price: "200", imgsrc: "https://m.media-amazon.com/images/I/61BEhM3G1JL._AC_UF1000,1000_QL80_.jpg" },
+  { id: 3, title: 'Zebronics Headphones', stock: '3', price: "500", imgsrc: "https://shop.zebronics.com/cdn/shop/files/Zeb-Thunder-pic5.jpg?v=1702966217&width=1200" },
+  { id: 4, title: 'Cadbury Dairy Milk', stock: '6', price: "50", imgsrc: "https://images-cdn.ubuy.co.in/63df4369c8cbe2490914bae6-cadbury-dairy-milk-bar-360g-by.jpg" },
 ];
 
 const newItems = {
-  11: [{ id: 5, title: 'Biscuit', stock: '5', price: "50", imgsrc: "https://via.placeholder.com/150" }],
+  11: [{ id: 5, title: 'Biscuit', stock: '5', price: "50", imgsrc: "https://m.media-amazon.com/images/I/81c0jxRWx3L.jpg" }],
   12: [
-    { id: 5, title: 'Biscuit', stock: '5', price: "50", imgsrc: "https://via.placeholder.com/150" },
-    { id: 6, title: 'Namkeen', stock: '10', price: "30", imgsrc: "https://via.placeholder.com/150" }
+    { id: 5, title: 'Biscuit', stock: '5', price: "50", imgsrc: "https://m.media-amazon.com/images/I/81c0jxRWx3L.jpg" },
+    { id: 6, title: 'Namkeen', stock: '10', price: "30", imgsrc: "https://m.media-amazon.com/images/I/91+yVKanvjL.jpg" }
   ],
   13: [
-    { id: 5, title: 'Biscuit', stock: '5', price: "50", imgsrc: "https://via.placeholder.com/150" },
-    { id: 6, title: 'Namkeen', stock: '10', price: "30", imgsrc: "https://via.placeholder.com/150" },
-    { id: 7, title: 'Chocolate', stock: '20', price: "100", imgsrc: "https://via.placeholder.com/150" }
+    { id: 5, title: 'Biscuit', stock: '5', price: "50", imgsrc: "https://m.media-amazon.com/images/I/81c0jxRWx3L.jpg" },
+    { id: 6, title: 'Namkeen', stock: '10', price: "30", imgsrc: "https://m.media-amazon.com/images/I/91+yVKanvjL.jpg" },
+    { id: 7, title: 'Chocolate', stock: '20', price: "100", imgsrc: "https://www.bigbasket.com/media/uploads/p/xxl/40018532_8-nestle-chocolate-classic.jpg" }
   ]
 };
 
@@ -63,11 +63,12 @@ const Inventory = ({ itemKey }) => {
           <div style={{
             width: "100%",
             height: "10rem",
-            backgroundImage: `url(${card.imgsrc})`,
-            backgroundSize: "cover",
+            backgroundImage: `url(${card.imgsrc})`, 
+            backgroundSize: "contain",
             backgroundPosition: "center",
+            backgroundColor: "#f0f0f0",backgroundRepeat:'no-repeat'
           }}></div>
-          <span style={{ textAlign: "left", margin: "0", alignSelf: "flex-start", marginLeft: "1.1rem", marginTop: ".3rem", fontSize: "1.2rem", fontWeight: "600" }}>{card.title}</span>
+          <span style={{ textAlign: "left", margin: "0", alignSelf: "flex-start", marginLeft: "1.1rem", marginTop: ".3rem", fontSize: "1.2rem", fontWeight: "600" ,color:'white'}}>{card.title}</span>
           <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", width: "100%", margin: "0", marginTop: ".2rem", padding: "0rem 1rem" }}>
             <div style={{ margin: "0", display: "flex", flexDirection: "row" }}><span style={{ fontSize: "1.5rem", color: "#58b34e" }}>₹</span><span style={{ fontSize: "1.5rem", color: "darkgreen", position: "relative", bottom: ".1rem", marginLeft: ".2rem" }}>{card.price}</span> </div>
             <p style={{
